@@ -55,6 +55,16 @@ for (const btn of allBtn){
       li.appendChild(p)
       li.appendChild(p2)
 
+
+    const budget = document.getElementById("budget").innerText;
+    const convertedBudget=parseInt(budget);
+
+    if (convertedBudget-parseInt(price)<0){
+        alert('low budget');
+        return;
+    }
+    document.getElementById("budget").innerText=convertedBudget-parseInt(price);
+
       selectedContainer.appendChild(li)
 
       //>>-> prothome jeta main cotainer jekhane price and place show korbo setar id dhoresi then li create kore li er vetore 2 ta p tag create kore p tag k li er moddhe appendchild kore rekhe diyesi ..then li k main container a appendChild kore dilam
